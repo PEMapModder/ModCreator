@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ModCreator</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_import">Import ModPE function list</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="settings_storage">Storage</string>
+    <string name="settings_folder_title">App folder</string>
+    <string name="settings_key_folder_title">pref_folder_title</string>
+    <string name="settings_invalid_folder">Invalid folder name; failed to create that folder. Folder will not be changed.</string>
+    <string name="settings_folder_cannot_make_file">Cannot create file method-dump.txt in the folder. Folder will not be changed.</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_manage_project">ManageProject</string>
+
+</resources>
