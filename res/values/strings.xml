@@ -13,5 +13,9 @@
     <string name="settings_folder_cannot_make_file">Cannot create file method-dump.txt in the folder. Folder will not be changed.</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_manage_project">ManageProject</string>
+    <string name="project_not_unlocked">Warning: The project was not closed properly after last use. There might be data loss because of this.</string>
+    <string name="project_saved">Project saved.</string>
+    <string name="dump_file_absent">MCPE method dump cannot be found on your device. Perhaps you changed your app directory?</string>
+    <string name="dump_file_absent_suggestion">Use Options -> Import ModPE function list to download the newest method list.</string>
 
 </resources>

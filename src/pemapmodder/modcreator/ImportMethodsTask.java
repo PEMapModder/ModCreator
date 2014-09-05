@@ -58,13 +58,16 @@ public class ImportMethodsTask extends AsyncTask<Context, Object, Integer>{
 				is.close();
 				String src = builder.toString();
 				String result = src
-//						.replaceAll("/\\*.*\\*/", "")
-						.replaceAll("//[^\n]*\n", "");
+						.replaceAll("/\\*(?:.|[\\n\\r])*?\\*/", "")
+//						.replaceAll("//.*$\n", "")
+						;
 				List<Function> functions = getTopNamespaceFunctions(result.substring(0));
 				functions.addAll(parseClassMethods(result.substring(0)));
 				cnt = functions.size();
 				Writer writer = new OutputStreamWriter(new FileOutputStream(Utils.getMethodDumpFile(ctx)));
 				for(Function fx: functions){
+					writer.append(fx.getReturnType());
+					writer.append(' ');
 					writer.append(fx.getQualifiedName());
 					writer.append(':');
 					String buffer = "";
@@ -76,6 +79,7 @@ public class ImportMethodsTask extends AsyncTask<Context, Object, Integer>{
 					}
 					writer.append(buffer, 0, buffer.length() - 1);
 					writer.append("\n");
+					// ReturnType Namespace.fxName:Arg1Type arg1,Arg2Type arg2
 				}
 				writer.close();
 			}
